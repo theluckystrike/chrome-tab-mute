@@ -1,0 +1,37 @@
+{
+    "name": "chrome-tab-mute",
+    "version": "0.1.0",
+    "description": "Tab audio control for Chrome extensions — mute/unmute tabs, mute by domain, auto-mute background tabs, and audio focus management for MV3.",
+    "author": "Zovo <hello@zovo.one>",
+    "license": "MIT",
+    "keywords": [
+        "chrome-extension",
+        "mute",
+        "audio",
+        "tab-mute",
+        "sound",
+        "manifest-v3",
+        "browser-extension",
+        "volume",
+        "audible"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/theluckystrike/chrome-tab-mute.git"
+    },
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "prepublishOnly": "npm run build"
+    },
+    "devDependencies": {
+        "@types/chrome": "^0.0.260",
+        "typescript": "^5.3.3"
+    }
+}
