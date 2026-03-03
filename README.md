@@ -1,12 +1,33 @@
-# chrome-tab-mute — Tab Audio Control for Extensions
-> **Built by [Zovo](https://zovo.one)** | `npm i chrome-tab-mute`
+# chrome-tab-mute
 
-Mute, unmute, toggle, mute-all, mute-background, and domain-based muting.
+Mute and unmute tabs in Chrome extensions.
 
-```typescript
-import { TabMute } from 'chrome-tab-mute';
-await TabMute.muteBackground();
-await TabMute.muteByDomain('youtube.com');
-const audible = await TabMute.getAudible();
+## Overview
+
+chrome-tab-mute provides utilities to control audio muting for individual tabs.
+
+## Installation
+
+```bash
+npm install chrome-tab-mute
 ```
-MIT License
+
+## Usage
+
+```javascript
+import { TabMute } from 'chrome-tab-mute';
+
+await TabMute.mute(tabId);
+await TabMute.unmute(tabId);
+const isMuted = await TabMute.isMuted(tabId);
+```
+
+## API
+
+- `mute(tabId)` - Mute tab
+- `unmute(tabId)` - Unmute tab
+- `isMuted(tabId)` - Check muted state
+
+## License
+
+MIT
